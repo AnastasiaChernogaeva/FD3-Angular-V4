@@ -13,7 +13,7 @@ export class RainbowDirective {
     },1500);
   } 
 
-  // привязываем стилевое свойсто хост-компонента (родителя)
+  // привязываем стилевое свойство хост-компонента (родителя)
   // к свойству класса hostBgColor
   @HostBinding("style.backgroundColor") 
   private hostBgColor:string;

@@ -9,10 +9,6 @@ import { Component, Input } from '@angular/core';
 export class HotelTitleComponent {
 
   @Input("hotel-name")
-  private hotelName:string;
-
-  getName():string {
-    return this.hotelName;
-  }
+  public name:string;
 
 }
