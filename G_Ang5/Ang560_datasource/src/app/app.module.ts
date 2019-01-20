@@ -6,8 +6,8 @@ import { HotelComponent } from './hotel.component';
 import { HotelTitleComponent } from './hotel-title.component';
 import { HotelDatasource } from './hotel.datasource';
 
-let heartBreakHotel:HotelDatasource=new HotelDatasource();
-heartBreakHotel.setName("Heartbreak Hotel");
+//let heartBreakHotel:HotelDatasource=new HotelDatasource();
+//heartBreakHotel.setName("Heartbreak Hotel");
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
@@ -15,7 +15,12 @@ heartBreakHotel.setName("Heartbreak Hotel");
     HotelComponent, HotelTitleComponent
   ],
   providers: [
-    {provide:HotelDatasource, useValue: heartBreakHotel},
+    // кто захочет HotelDatasource - можно, использовать один на всех объект 
+    // класса HotelDatasource, он будет создан автоматически
+    HotelDatasource,
+    //{provide:HotelDatasource, useClass: HotelDatasource}, 
+    // кто захочет HotelDatasource - можно, использовать один на всех объект heartBreakHotel
+    //{provide:HotelDatasource, useValue: heartBreakHotel},
   ],
   bootstrap: [HotelComponent]
 })
