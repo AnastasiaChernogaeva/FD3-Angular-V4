@@ -14,7 +14,7 @@ export class HotelRoomComponent {
   @Input("beds")
   private beds:number;
 
-  @Input("roomlink")
+  @Input("roomlink") // если задан - значит мы на странице со СПИСКОМ комнат и можно показать ссылку на страницу комнатЫ
   public roomLink:string;
 
   getNum():number {

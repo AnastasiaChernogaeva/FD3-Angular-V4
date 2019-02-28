@@ -12,7 +12,7 @@ describe('тестируем TestMeComponent: ', () => {
     }).compileComponents();
   }));
 
-  it('компонент должен успешно создаваться', async(() => {
+  it('компонент должен успешно создаваться', async(() => { // внимание - здесь async это имя функции, а не ключевое слово JS
     const fixture = TestBed.createComponent(TestMeComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
